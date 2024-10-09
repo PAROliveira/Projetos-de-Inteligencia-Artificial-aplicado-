@@ -6,7 +6,7 @@ Este projeto utiliza algoritmos de aprendizado de máquina para classificar empr
 ## Organização do Repositório
 
 - **README.md**: Este arquivo, com informações sobre o projeto.
-- **main.ipynb**: Notebook principal contendo a explicação detalhada da estratégia, execução do código, e geração de relatórios.
+- **Agrupamento_k_means.ipynb**: Notebook principal contendo a explicação detalhada da estratégia, execução do código, e geração de relatórios.
 
 
 ## Descrição do Projeto
