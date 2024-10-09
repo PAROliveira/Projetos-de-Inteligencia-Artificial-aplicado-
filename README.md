@@ -7,7 +7,7 @@ Este projeto utiliza algoritmos de aprendizado de máquina para classificar empr
 
 - **README.md**: Este arquivo, com informações sobre o projeto.
 - **Agrupamento_k_means.ipynb**: Notebook principal contendo a explicação detalhada da estratégia, execução do código, e geração de relatórios.
-
+- **Classificacao de empresas utilizando agrupamento com k means**: arquivo com o pdf do artigo (falta acabar)
 
 ## Descrição do Projeto
 
