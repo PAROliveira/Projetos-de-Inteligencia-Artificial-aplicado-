@@ -25,7 +25,7 @@ O projeto é dividido em duas partes principais:
 ## Primeiros Passos
 
 
-1. Execute o notebook principal `main.ipynb` para visualizar a estratégia de classificação e agrupamento de empresas, além dos resultados gerados.
+1. Execute o notebook principal `Agrupamento_k_means.ipynb` para visualizar a estratégia de classificação e agrupamento de empresas, além dos resultados gerados.
 2. Utilize os gráficos e relatórios para interpretar os padrões e insights obtidos com o agrupamento.
 
 > Observação: Toda a lógica de classificação e agrupamento é implementada em arquivos dentro do documento main.ipynb, e é chamada no notebook para fins de visualização e geração de relatórios.
