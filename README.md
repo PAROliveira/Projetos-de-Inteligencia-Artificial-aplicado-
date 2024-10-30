@@ -1,57 +1,76 @@
-Projeto de Otimização de Sinais de Compra e Venda em Bitcoin com Machine Learning
-Índice
-Resumo
-Introdução
-Revisão de Literatura
-Metodologia
-Criação dos Sinais de Compra e Venda
-Feature Engineering
-Média Móvel Exponencial (EMA)
-Taxa de Variação (Rate of Change - ROC)
-Momentum (MOM)
-Relative Strength Index (RSI)
-Oscilador Estocástico (%K e %D)
-Média Móvel Simples (MA)
-Modelos de Machine Learning
-Random Forest
-Otimização de Hiperparâmetros com Grid Search
-Resumo
-Inicialmente idealizado como um sistema de pagamento descentralizado e peer-to-peer, o Bitcoin evoluiu para se tornar uma reserva de valor e um ativo altamente volátil. A aplicação de técnicas de Machine Learning (ML) oferece uma abordagem inovadora para a otimização de sinais de compra e venda de Bitcoin, analisando grandes volumes de dados históricos, identificando padrões e ajustando estratégias de forma automatizada e dinâmica.
+# Otimização de Sinais de Compra e Venda em Bitcoin com Machine Learning
 
-Introdução
-A previsão de retornos de ativos financeiros é essencial para decisões de investimento. Técnicas de Machine Learning (ML) automatizam a construção de modelos analíticos e permitem identificar padrões complexos em dados financeiros. No contexto do trading de Bitcoin, a aplicação de algoritmos como o Random Forest se mostrou eficiente na previsão de preços e tendências de mercado.
+## Índice
+- [Resumo](#resumo)
+- [Introdução](#introdução)
+- [Revisão de Literatura](#revisão-de-literatura)
+- [Metodologia](#metodologia)
+  - [Criação dos Sinais de Compra e Venda](#criação-dos-sinais-de-compra-e-venda)
+  - [Feature Engineering](#feature-engineering)
+    - [Média Móvel Exponencial (EMA)](#média-móvel-exponencial-ema)
+    - [Taxa de Variação (Rate of Change - ROC)](#taxa-de-variação-rate-of-change---roc)
+    - [Momentum (MOM)](#momentum-mom)
+    - [Relative Strength Index (RSI)](#relative-strength-index-rsi)
+    - [Oscilador Estocástico (%K e %D)](#oscilador-estocástico-k-e-d)
+    - [Média Móvel Simples (MA)](#média-móvel-simples-ma)
+  - [Modelos de Machine Learning](#modelos-de-machine-learning)
+    - [Random Forest](#random-forest)
+    - [Otimização de Hiperparâmetros com Grid Search](#otimização-de-hiperparâmetros-com-grid-search)
+- [Conclusão](#conclusão)
+- [Referências](#referências)
 
-Revisão de Literatura
-Estratégias tradicionais: A análise técnica estuda padrões de preço e volume, enquanto a análise fundamentalista avalia fatores econômicos para determinar o valor intrínseco.
-Machine Learning no trading: Algoritmos de ML como redes neurais profundas e Random Forest têm mostrado eficácia na previsão de retornos e tendências de mercado.
-Metodologia
-Criação dos Sinais de Compra e Venda
-Implementação de sinais baseados em médias móveis de curto e longo prazo. Se a média de curto prazo estiver acima da média de longo prazo, indica-se compra; caso contrário, venda ou inatividade.
+---
 
-Feature Engineering
-Média Móvel Exponencial (EMA)
-Uma média ponderada que dá maior peso aos preços mais recentes, usada para diferentes tendências (curto, médio e longo prazo).
+## Resumo
+Este projeto visa otimizar sinais de compra e venda para Bitcoin utilizando técnicas de Machine Learning (ML). Com a análise de dados históricos, o modelo identifica padrões de mercado e ajusta estratégias de forma automatizada, fornecendo uma abordagem dinâmica para o trading de Bitcoin.
 
-Taxa de Variação (Rate of Change - ROC)
-Mede a variação percentual do preço em relação a um período anterior, captando mudanças de curto e médio prazo.
+## Introdução
+Com a evolução do Bitcoin de um sistema de pagamento para um ativo de reserva de valor volátil, o uso de ML para prever movimentos de mercado tornou-se relevante. Este projeto aplica algoritmos de ML, como Random Forest, para analisar tendências e prever preços de Bitcoin.
 
-Momentum (MOM)
-Calcula a diferença entre o preço atual e o preço de períodos anteriores, medindo a força da tendência.
+## Revisão de Literatura
+A revisão de literatura aborda:
+1. **Análise Técnica**: Estudo de padrões de preço e volume.
+2. **Análise Fundamentalista**: Avaliação de fatores econômicos para determinar o valor intrínseco do ativo.
+3. **ML no Trading**: Aplicações de algoritmos de ML, como redes neurais profundas e Random Forest, que mostraram eficácia em prever retornos de mercado.
 
-Relative Strength Index (RSI)
-Um oscilador que mede a velocidade e a mudança dos movimentos de preços, indicando condições de sobrecompra ou sobrevenda.
+## Metodologia
 
-Oscilador Estocástico (%K e %D)
-Avalia a posição do preço de fechamento em relação aos máximos e mínimos de um período, identificando sobrecompra ou sobrevenda.
+### Criação dos Sinais de Compra e Venda
+Implementação de sinais de compra e venda com médias móveis de curto e longo prazo. A estratégia considera a posição relativa entre as médias móveis para indicar compra, venda ou inatividade.
 
-Média Móvel Simples (MA)
-Calcula a média dos preços de fechamento sobre um intervalo específico.
+### Feature Engineering
+O projeto inclui diversas métricas para enriquecer os dados usados nos modelos de ML:
 
-Modelos de Machine Learning
-Testamos diferentes algoritmos de Machine Learning para classificação, medindo o desempenho com validação cruzada de 10 folds. Incluímos algoritmos como Random Forest, KNN, LDA, entre outros.
+#### Média Móvel Exponencial (EMA)
+A EMA dá maior peso aos preços mais recentes e ajuda a capturar tendências em diferentes períodos.
 
-Random Forest
-Utiliza um modelo de ensemble para combinar múltiplas árvores de decisão, aumentando a precisão e evitando overfitting. Inclui otimização de hiperparâmetros com Grid Search e validação cruzada.
+#### Taxa de Variação (Rate of Change - ROC)
+Calcula a variação percentual do preço em relação a um período anterior, capturando mudanças de curto e médio prazo.
 
-Otimização de Hiperparâmetros com Grid Search
-Os dados de treinamento foram padronizados usando StandardScaler para garantir média zero e desvio padrão unitário. Utilizamos Grid Search para ajuste dos hiperparâmetros.
+#### Momentum (MOM)
+Indica a força de uma tendência ao calcular a diferença entre o preço atual e o preço de períodos passados.
+
+#### Relative Strength Index (RSI)
+Um indicador que mede a velocidade e magnitude dos movimentos de preços, identificando condições de sobrecompra ou sobrevenda.
+
+#### Oscilador Estocástico (%K e %D)
+Acompanha a posição do preço em relação aos máximos e mínimos em um período específico, ajudando a identificar condições de mercado.
+
+#### Média Móvel Simples (MA)
+Calcula a média dos preços de fechamento em um intervalo determinado, fornecendo uma visão geral da tendência de mercado.
+
+### Modelos de Machine Learning
+Os dados foram analisados com diferentes algoritmos de classificação, medindo desempenho com validação cruzada de 10 folds. Algoritmos testados incluem Random Forest, KNN e LDA, entre outros.
+
+#### Random Forest
+Um ensemble de múltiplas árvores de decisão, que aumenta a precisão e ajuda a evitar overfitting. Inclui otimização de hiperparâmetros com Grid Search.
+
+#### Otimização de Hiperparâmetros com Grid Search
+Ajuste dos hiperparâmetros por meio do Grid Search, com dados de treinamento padronizados usando o StandardScaler para garantir média zero e desvio padrão unitário.
+
+## Conclusão
+O projeto demonstrou que técnicas de Machine Learning aplicadas a sinais de compra e venda para Bitcoin oferecem uma abordagem inovadora para traders, otimizando decisões de mercado com análise dinâmica e automatizada.
+
+## Referências
+- [Referências detalhadas sobre revisão de literatura e algoritmos utilizados]
+
