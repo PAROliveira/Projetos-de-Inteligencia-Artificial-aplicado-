@@ -1,31 +1,57 @@
-# Projetos-de-Inteligencia-Artificial-aplicado-
-# Projeto de Classificação e Agrupamento de Empresas
+Projeto de Otimização de Sinais de Compra e Venda em Bitcoin com Machine Learning
+Índice
+Resumo
+Introdução
+Revisão de Literatura
+Metodologia
+Criação dos Sinais de Compra e Venda
+Feature Engineering
+Média Móvel Exponencial (EMA)
+Taxa de Variação (Rate of Change - ROC)
+Momentum (MOM)
+Relative Strength Index (RSI)
+Oscilador Estocástico (%K e %D)
+Média Móvel Simples (MA)
+Modelos de Machine Learning
+Random Forest
+Otimização de Hiperparâmetros com Grid Search
+Resumo
+Inicialmente idealizado como um sistema de pagamento descentralizado e peer-to-peer, o Bitcoin evoluiu para se tornar uma reserva de valor e um ativo altamente volátil. A aplicação de técnicas de Machine Learning (ML) oferece uma abordagem inovadora para a otimização de sinais de compra e venda de Bitcoin, analisando grandes volumes de dados históricos, identificando padrões e ajustando estratégias de forma automatizada e dinâmica.
 
-Este projeto utiliza algoritmos de aprendizado de máquina para classificar empresas em boas e ruins, e em seguida aplicar técnicas de agrupamento para identificar padrões ocultos nos dados financeiros.
+Introdução
+A previsão de retornos de ativos financeiros é essencial para decisões de investimento. Técnicas de Machine Learning (ML) automatizam a construção de modelos analíticos e permitem identificar padrões complexos em dados financeiros. No contexto do trading de Bitcoin, a aplicação de algoritmos como o Random Forest se mostrou eficiente na previsão de preços e tendências de mercado.
 
-## Organização do Repositório
+Revisão de Literatura
+Estratégias tradicionais: A análise técnica estuda padrões de preço e volume, enquanto a análise fundamentalista avalia fatores econômicos para determinar o valor intrínseco.
+Machine Learning no trading: Algoritmos de ML como redes neurais profundas e Random Forest têm mostrado eficácia na previsão de retornos e tendências de mercado.
+Metodologia
+Criação dos Sinais de Compra e Venda
+Implementação de sinais baseados em médias móveis de curto e longo prazo. Se a média de curto prazo estiver acima da média de longo prazo, indica-se compra; caso contrário, venda ou inatividade.
 
-- **README.md**: Este arquivo, com informações sobre o projeto.
-- **Agrupamento_k_means.ipynb**: Notebook principal contendo a explicação detalhada da estratégia, execução do código, e geração de relatórios.
-- **Classificacao de empresas utilizando agrupamento com k means**: arquivo com o pdf do artigo (falta acabar)
+Feature Engineering
+Média Móvel Exponencial (EMA)
+Uma média ponderada que dá maior peso aos preços mais recentes, usada para diferentes tendências (curto, médio e longo prazo).
 
-## Descrição do Projeto
+Taxa de Variação (Rate of Change - ROC)
+Mede a variação percentual do preço em relação a um período anterior, captando mudanças de curto e médio prazo.
 
-O projeto é dividido em duas partes principais:
+Momentum (MOM)
+Calcula a diferença entre o preço atual e o preço de períodos anteriores, medindo a força da tendência.
 
-1. **Classificação de Empresas**:
-   - Nesta etapa, utilizamos algoritmos supervisionados, como **Árvores de Decisão** e **Redes Neurais**, para classificar as empresas em boas ou ruins. Foram utilizados vários indicadores financeiros, ponderados de acordo com sua importância, para treinar os modelos e prever a classificação das empresas.
-   - O processo incluiu a transformação logarítmica dos dados e ajustes de pesos para variáveis que influenciam positivamente ou negativamente o resultado.
+Relative Strength Index (RSI)
+Um oscilador que mede a velocidade e a mudança dos movimentos de preços, indicando condições de sobrecompra ou sobrevenda.
 
-2. **Agrupamento de Empresas**:
-   - Após a classificação, aplicamos algoritmos de agrupamento **não supervisionados**, como o **K-Means**, para identificar padrões ocultos nos dados. Isso nos permitiu agrupar empresas com características semelhantes, independente de sua classificação como boa ou ruim.
-   - Além disso, utilizamos o **PCA (Análise de Componentes Principais)** para reduzir a dimensionalidade dos dados, facilitando a visualização dos clusters em gráficos bidimensionais.
-   - No final, os resultados foram apresentados em gráficos de dispersão, mostrando a separação dos clusters e as médias de atributos financeiros para cada grupo.
+Oscilador Estocástico (%K e %D)
+Avalia a posição do preço de fechamento em relação aos máximos e mínimos de um período, identificando sobrecompra ou sobrevenda.
 
-## Primeiros Passos
+Média Móvel Simples (MA)
+Calcula a média dos preços de fechamento sobre um intervalo específico.
 
+Modelos de Machine Learning
+Testamos diferentes algoritmos de Machine Learning para classificação, medindo o desempenho com validação cruzada de 10 folds. Incluímos algoritmos como Random Forest, KNN, LDA, entre outros.
 
-1. Execute o notebook principal `Agrupamento_k_means.ipynb` para visualizar a estratégia de classificação e agrupamento de empresas, além dos resultados gerados.
-2. Utilize os gráficos e relatórios para interpretar os padrões e insights obtidos com o agrupamento.
+Random Forest
+Utiliza um modelo de ensemble para combinar múltiplas árvores de decisão, aumentando a precisão e evitando overfitting. Inclui otimização de hiperparâmetros com Grid Search e validação cruzada.
 
-> Observação: Toda a lógica de classificação e agrupamento é implementada em arquivos dentro do documento main.ipynb, e é chamada no notebook para fins de visualização e geração de relatórios.
+Otimização de Hiperparâmetros com Grid Search
+Os dados de treinamento foram padronizados usando StandardScaler para garantir média zero e desvio padrão unitário. Utilizamos Grid Search para ajuste dos hiperparâmetros.
